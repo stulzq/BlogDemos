@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacDynamicProxyTest", "AutofacDynamicProxyTest\AutofacDynamicProxyTest.csproj", "{DB21EC39-0361-4DF9-93B3-97133780D1F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB21EC39-0361-4DF9-93B3-97133780D1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB21EC39-0361-4DF9-93B3-97133780D1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB21EC39-0361-4DF9-93B3-97133780D1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB21EC39-0361-4DF9-93B3-97133780D1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52EA3CF5-FF61-4821-B414-2EBD8CB0B813}
+	EndGlobalSection
+EndGlobal
