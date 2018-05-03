@@ -31,8 +31,8 @@ namespace QuickstartIdentityServer
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
-//                new ApiResource("api1", "My API",new List<string>(){JwtClaimTypes.Role})
+//                new ApiResource("api1", "My API")
+                new ApiResource("api1", "My API",new List<string>(){JwtClaimTypes.Role})
             };
         }
 
