@@ -43,7 +43,7 @@
 
 @section Scripts
 {
-    <script src="https://www.google.com/recaptcha/api.js?render=@options.Value.SiteKey"></script>
+    <script src="https://www.recaptcha.net/recaptcha/api.js?render=@options.Value.SiteKey"></script>
     <script type="text/javascript">
         grecaptcha.ready(function () {
             grecaptcha.execute('@options.Value.SiteKey', { action: 'login' }).then(function (token) {
