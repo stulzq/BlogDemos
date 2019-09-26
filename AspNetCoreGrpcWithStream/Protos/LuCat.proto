@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "AspNetCoregRpcService";
+
+import "google/protobuf/empty.proto";
+package LuCat; //定义包名
+
+//定义服务
+service LuCat{
+    //定义吸猫方法
+	rpc SuckingCat(google.protobuf.Empty) returns(SuckingCatResult);
+
+	//定义给猫洗澡双向流rpc
+	rpc BathTheCat(stream BathTheCatReq) returns ( stream BathTheCatResp);
+
+	//定义统计猫数量简单rpc
+	rpc Count(google.protobuf.Empty) returns (CountCatResult);
+
+}
+
+message SuckingCatResult{
+	string message=1;
+}
+
+message BathTheCatReq{
+    int32 id=1;
+}
+
+message BathTheCatResp{
+	string message=1;
+}
+
+message CountCatResult{
+	int32 Count=1;
+}
+
