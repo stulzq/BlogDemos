@@ -1,0 +1,29 @@
+﻿@page "/counter"
+@inject IJSRuntime JsRuntime
+
+<h1>GUID 生成器</h1>
+
+<div class="row">
+    <div class="col-2">
+        <input class="form-control" type="text" value="@_guidValue" />
+    </div>
+    <div class="col-10">
+        <button class="btn btn-primary" @onclick="GenerateGuid">生 成</button>
+        <button class="btn btn-danger" @onclick="CopyTextToClipboard">复制到剪贴板</button>
+    </div>
+</div>
+
+
+@code {
+    private Guid? _guidValue;
+
+    private void GenerateGuid()
+    {
+        _guidValue = Guid.NewGuid();
+    }
+
+    private async Task CopyTextToClipboard()
+    {
+        await JsRuntime.InvokeVoidAsync("clipboardCopy.copyText", _guidValue);
+    }
+}
