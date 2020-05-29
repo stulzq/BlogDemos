@@ -1,0 +1,15 @@
+﻿
+<div class="row">
+    <h2>父组件</h2>
+</div>
+
+<div class="row">
+    <span>ParentYear: </span> <input class="form-control" type="text" @bind="ParentYear" @bind:event="oninput"/>
+</div>
+
+<ChildComponent @bind-Year="ParentYear" />
+
+@code {
+    [Parameter]
+    public int ParentYear { get; set; } = 1978;
+}

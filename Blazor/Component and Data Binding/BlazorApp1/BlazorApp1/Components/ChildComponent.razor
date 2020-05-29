@@ -1,0 +1,23 @@
+﻿
+<div class="row">
+    <h2>子组件</h2>
+</div>
+
+<div class="row">
+    <span>Year: </span> <input class="form-control" type="text" @oninput="OnYearChanged" value="@Year" />
+</div>
+
+@code {
+    [Parameter]
+    public int Year { get; set; }
+
+    [Parameter]
+    public EventCallback<int> YearChanged { get; set; }
+
+    private Task OnYearChanged(ChangeEventArgs e)
+    {
+        Year = int.Parse(e.Value.ToString());
+
+        return YearChanged.InvokeAsync(Year);
+    }
+}
